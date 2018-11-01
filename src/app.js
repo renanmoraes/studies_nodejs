@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const router = require('./core/routers');
 
 const app = express();
 
@@ -10,13 +11,7 @@ app.use(compression({
     threshold: 100
 }));
 
-app.get('/', (req, res) => {
-    return res.json({status: "deu certo"}).end();;
-});
-
-app.post('/', (req, res) => {
-    return res.json(req.body).end();;
-});
+router.init.syncRouter(app);
 
 // Listen server
 app.listen(4000, '127.0.0.1', () => {

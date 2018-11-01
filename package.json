@@ -7,7 +7,7 @@
     "dev": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Renan Moraes",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
